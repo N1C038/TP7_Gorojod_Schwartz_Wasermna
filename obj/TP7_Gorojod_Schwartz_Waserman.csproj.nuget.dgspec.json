@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "Z:\\Programacion\\TP7_Gorojod_Schwartz_Waserman\\TP7_Gorojod_Schwartz_Waserman.csproj": {}
+    "C:\\Users\\49625406\\TP7_Gorojod_Schwartz_Wasermna\\TP7_Gorojod_Schwartz_Waserman.csproj": {}
   },
   "projects": {
-    "Z:\\Programacion\\TP7_Gorojod_Schwartz_Waserman\\TP7_Gorojod_Schwartz_Waserman.csproj": {
+    "C:\\Users\\49625406\\TP7_Gorojod_Schwartz_Wasermna\\TP7_Gorojod_Schwartz_Waserman.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Z:\\Programacion\\TP7_Gorojod_Schwartz_Waserman\\TP7_Gorojod_Schwartz_Waserman.csproj",
+        "projectUniqueName": "C:\\Users\\49625406\\TP7_Gorojod_Schwartz_Wasermna\\TP7_Gorojod_Schwartz_Waserman.csproj",
         "projectName": "TP7_Gorojod_Schwartz_Waserman",
-        "projectPath": "Z:\\Programacion\\TP7_Gorojod_Schwartz_Waserman\\TP7_Gorojod_Schwartz_Waserman.csproj",
+        "projectPath": "C:\\Users\\49625406\\TP7_Gorojod_Schwartz_Wasermna\\TP7_Gorojod_Schwartz_Waserman.csproj",
         "packagesPath": "C:\\Users\\49625406\\.nuget\\packages\\",
-        "outputPath": "Z:\\Programacion\\TP7_Gorojod_Schwartz_Waserman\\obj\\",
+        "outputPath": "C:\\Users\\49625406\\TP7_Gorojod_Schwartz_Wasermna\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

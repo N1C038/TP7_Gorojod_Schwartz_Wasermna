@@ -1,3 +1,59 @@
-﻿@{
+﻿@model List<Publicacion>
+@{
     ViewData["Title"] = "Home Page";
 }
+
+<div class="container mt-5">
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <h1>Red Social</h1>
+        </div>
+        <div class="col-md-6 text-end">
+            @{
+                var usuarioId = Context.Session.GetInt32("usuarioId");
+                var nombreUsuario = Context.Session.GetString("nombreUsuario");
+            }
+            
+            @if (usuarioId == null)
+            {
+                <a href="/Auth/Login" class="btn btn-primary">Iniciar Sesión</a>
+                <a href="/Auth/Register" class="btn btn-success">Registrarse</a>
+            }
+            else
+            {
+                <span class="me-3">Bienvenido, <strong>@nombreUsuario</strong></span>
+                <a href="/Publicacion/Create" class="btn btn-info">Crear Publicación</a>
+                <a href="/Home/logOutUsuario" class="btn btn-danger">Cerrar Sesión</a>
+            }
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Publicaciones Recientes</h2>
+            @if (Model != null && Model.Count > 0)
+            {
+                @foreach (var publicacion in Model)
+                {
+                    <div class="card mb-4">
+                        @if (!string.IsNullOrEmpty(publicacion.imagen))
+                        {
+                            <img src="@publicacion.imagen" class="card-img-top" alt="Imagen de publicación" style="max-height: 400px; object-fit: cover;">
+                        }
+                        <div class="card-body">
+                            <h5 class="card-title">@publicacion.titulo</h5>
+                            <p class="card-text">@publicacion.descripcion</p>
+                            <small class="text-muted">Publicado: @publicacion.fechaPublicacion.ToString("dd/MM/yyyy HH:mm")</small>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="alert alert-info">
+                    No hay publicaciones disponibles. @if (usuarioId != null) { <a href="/Publicacion/Create">¡Sé el primero!</a> }
+                </div>
+            }
+        </div>
+    </div>
+</div>

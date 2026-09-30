@@ -7,6 +7,7 @@ namespace TP7_Gorojod_Schwartz_Waserman.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private BD bd = new BD();
 
     public HomeController(ILogger<HomeController> logger)
     {
@@ -15,7 +16,8 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        return View();
+        List<Publicacion> publicaciones = bd.obtenerPublicacionesRecientes();
+        return View(publicaciones);
     }
 
     public IActionResult Privacy()
@@ -27,5 +29,12 @@ public class HomeController : Controller
     public IActionResult Error()
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+    }
+
+    public IActionResult logOutUsuario(int idUsuario) {
+        HttpContext.Session.Remove("usuarioId");
+        HttpContext.Session.Remove("nombreUsuario");
+        HttpContext.Session.Remove("nombre");
+        return RedirectToAction("Index", "Home");
     }
 }
