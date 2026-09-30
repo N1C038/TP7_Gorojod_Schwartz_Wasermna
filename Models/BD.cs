@@ -19,7 +19,9 @@ public class BD {
         HttpContext.Session.Remove(idUsuario);
     }
     public Publicacion crearPublicacion(Publicacion publicacion) {
-        //hay que validar si el usuario está logueado para que pueda crear una publicación
+                //acá hay que validar si el usuario está logueado para que pueda crear una publicación
+              using (SqlConnection connection = new SqlConnection(connectionString)) {
+                connection.Execute("INSERT INTO Publicaciones (idUsuario, titulo, descripcion, fechaPublicacion, imagen) VALUES (@idUsuario, @titulo, @descripcion, @fechaPublicacion, @imagen)", publicacion);
         if (HttpContext.Session.GetInt32(idUsuario) == null) {
             throw new Exception("Usuario no logueado");
         }
@@ -29,5 +31,7 @@ public class BD {
             return publicacion;
             }
         }
+      }
     }
+    
 }
