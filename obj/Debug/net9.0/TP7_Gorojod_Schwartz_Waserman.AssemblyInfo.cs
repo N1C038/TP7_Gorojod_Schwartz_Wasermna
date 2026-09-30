@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TP7_Gorojod_Schwartz_Waserman")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d66024ab721d2f107c3e1da28ae50cdd29b3a3ef")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+821028e6e7df82a4219e8f76633e8163c5317c4f")]
 [assembly: System.Reflection.AssemblyProductAttribute("TP7_Gorojod_Schwartz_Waserman")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TP7_Gorojod_Schwartz_Waserman")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

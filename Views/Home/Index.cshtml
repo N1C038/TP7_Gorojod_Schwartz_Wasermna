@@ -16,14 +16,14 @@
             
             @if (usuarioId == null)
             {
-                <a href="/Auth/Login" class="btn btn-primary">Iniciar Sesión</a>
-                <a href="/Auth/Register" class="btn btn-success">Registrarse</a>
+                <a href="/Home/Login" class="btn btn-primary">Iniciar Sesión</a>
+                <a href="/Home/Register" class="btn btn-success">Registrarse</a>
             }
             else
             {
                 <span class="me-3">Bienvenido, <strong>@nombreUsuario</strong></span>
-                <a href="/Publicacion/Create" class="btn btn-info">Crear Publicación</a>
-                <a href="/Home/logOutUsuario" class="btn btn-danger">Cerrar Sesión</a>
+                <a href="/Home/Create" class="btn btn-info">Crear Publicación</a>
+                <a href="/Home/Logout" class="btn btn-danger">Cerrar Sesión</a>
             }
         </div>
     </div>
@@ -51,7 +51,7 @@
             else
             {
                 <div class="alert alert-info">
-                    No hay publicaciones disponibles. @if (usuarioId != null) { <a href="/Publicacion/Create">¡Sé el primero!</a> }
+                    No hay publicaciones disponibles. @if (usuarioId != null) { <a href="/Home/Create">¡Sé el primero!</a> }
                 </div>
             }
         </div>
